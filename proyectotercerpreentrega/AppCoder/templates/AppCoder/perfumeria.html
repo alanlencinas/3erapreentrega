@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumeria</title>
-</head>
-<body>
-    <h1>Perfumeria</h1>
-    <ul>
-        {% for perfume in perfumeria %}
-            <li>{{ perfumeria.Nombre }} - {{ perfumeria.Nombre }} - {{ perfumeria.Sexo }}</li>
-        {% endfor %}
-    </ul>
+{% extends 'AppCoder/padre.html' %}
 
-</body>
-</html>
+{% load static %}
+
+{% block titulo %} Perfumeria! <br><br>- NATURA- </br></br> {% endblock %}
+
+{% block contenido_que_cambia %}
+   <h1>ESTE ES EL CONTENIDO DE LA PAGINA QUE CAMBIA</h1>
+
+   {% for perfume in perfumeria%}
+        <li>{{ perfumeria.Codigo }} - {{ perfumeria.Nombre}} - {{ perfumeria.Sexo}} - {{ perfumeria.Codigo.Precio}}</li>
+    {% endfor %}
+{% endblock %}
