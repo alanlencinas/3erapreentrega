@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Perfumeria
 from django.http import HttpResponse
 
 # Create your views here.
@@ -16,7 +17,8 @@ def maquillaje(request):
     return render(request, 'AppCoder/maquillaje.html')
 
 def perfumeria(request):
-    return render(request, 'AppCoder/perfumeria.html')
+    perfumes = Perfumeria.objects.all()
+    return render(request, 'AppCoder/perfumeria.html', {'perfumes': perfumes})
 
 def clientes(request):
     return render(request, 'AppCoder/clientes.html')
