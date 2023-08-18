@@ -4,12 +4,11 @@ from .views import *
 urlpatterns = [
    
    
-    path('crear_curso/', crear_curso),
-    path('listar_curso/', listar_cursos),
-    path('profesores/', profesores, name = 'profesores'),
-    path('estudiantes/', estudiantes, name = 'estudiantes'),
-    path('cursos/', cursos, name = 'cursos'),
-    path('entregables/', entregables, name = 'entregables'), 
+    path('perfumeria/', perfumeria, name = 'perfumeria' ),
+    path('cuidadocorporal/', cuidadocorporal, name = 'cuidadocorporal'),
+    path('maquillaje/', maquillaje, name = 'maquillaje'),
+    path('cabello/', cabello, name = 'cabello'), 
+    path('clientes/', clientes, name = 'clientes'), 
 ]
 
 
