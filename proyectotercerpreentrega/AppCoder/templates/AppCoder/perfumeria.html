@@ -17,6 +17,30 @@
 
 </form>
 
+<table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Sexo</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for perfumeria in perfumeria %}
+      <tr>
+        <td>{{ perfumeria.Codigo }}</td>
+        <td>{{ perfumeria.Nombre }}</td>
+        <td>{{ perfumeria.Sexo }}</td>
+        <td>{{ perfumeria.Precio }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  
+
+
 <h3>{{ mensaje }}</h3>
 {% endblock %}
 

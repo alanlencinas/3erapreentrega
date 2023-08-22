@@ -47,22 +47,32 @@ def maquillaje(request):
 
 
 def perfumeria(request):
-    if request.method =="POST":
-        form=perfumeria_Formulario(request.POST)
+    if request.method == "POST":
+        form = perfumeria_Formulario(request.POST)
         if form.is_valid():
-          info=form.cleaned_data
-          codigo = info["Codigo"]
-          nombre=info["Nombre"]  
-          sexo=info["Sexo"]
-          precio=info["Precio"]
-          perfume = Perfumeria(Codigo=codigo, Nombre=nombre, Sexo=sexo, Precio=precio)
-          perfume.save()
-          formulario_perfumeria= perfumeria_Formulario
-          return render(request, "AppCoder/perfumeria.html", {"mensaje":"Perfume Creado", "formulario":formulario_perfumeria})
-        return render(request, "AppCoder/perfumeria.html", {'mensaje':'Datos Invalidos'})
+            info = form.cleaned_data
+            codigo = info["Codigo"]
+            nombre = info["Nombre"]
+            sexo = info["Sexo"]
+            precio = info["Precio"]
+            perfume = Perfumeria(Codigo=codigo, Nombre=nombre, Sexo=sexo, Precio=precio)
+            perfume.save()
+            mensaje = "Perfume Creado"
+        else:
+            mensaje = "Datos Inválidos"
+    
     else:
-        formulario_perfumeria = perfumeria_Formulario()
-        return render(request, "AppCoder/perfumeria.html", {'formulario':formulario_perfumeria})
+        mensaje = None
+
+    # Obtener todos los objetos Perfumeria
+    formulario_perfumeria = perfumeria_Formulario()
+    perfumeria = Perfumeria.objects.all()
+    
+
+    return render(request, "AppCoder/perfumeria.html", {"mensaje": mensaje, "formulario": formulario_perfumeria, "perfumeria": perfumeria})
+
+    
+
             
             
 def clientes(request):
@@ -106,13 +116,13 @@ def cuidadoCorporal(request):
         
 def busquedaPerfume(request):
     return render(request, "AppCoder/busquedaPerfume.html")
-
-def buscar(request):
-    codigo=request.GET["codigo"]
-    if codigo!="":
-        perfumes=Perfumeria.objects.filter(Codigo=codigo)
-        return render(request, "AppCoder/resultadosBusqueda.html", {"nombre":perfumes})
-    else:
-        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje":"No ingreso ningun dato!"})
     
-        
+def buscar(request):
+    
+    if request.GET["codigo"]!="":
+        codigo = request.GET["codigo"]
+        perfumes = Perfumeria.objects.filter(Codigo=codigo)
+        return render(request, "AppCoder/resultadosBusqueda.html", {"perfumes":perfumes, "codigo":codigo})
+    else:
+        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje": "No ingreso ningun dato!"})
+

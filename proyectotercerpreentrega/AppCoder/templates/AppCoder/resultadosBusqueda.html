@@ -7,9 +7,9 @@
  {% block contenido_que_cambia %}
     <h1>Resultados de Busqueda</h1>
 
-    {% for perfume in perfumes %}
+    {% for perfumes in perfumes %}
 
-        <h3>{{ perfume.Codigo }} - {{ perfume.Nombre }}</h3>
+        <h3>{{ perfumes.Codigo }} - {{ perfumes.Nombre }}</h3>
 
     {% endfor %}
 {% endblock %}
