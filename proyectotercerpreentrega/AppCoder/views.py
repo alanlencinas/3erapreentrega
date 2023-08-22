@@ -104,3 +104,15 @@ def cuidadoCorporal(request):
     return render(request, "AppCoder/cuidadocorporal.html", {'formulario':formulario_cuidadocorporal})
         
         
+def busquedaPerfume(request):
+    return render(request, "AppCoder/busquedaPerfume.html")
+
+def buscar(request):
+    codigo=request.GET["codigo"]
+    if codigo!="":
+        perfumes=Perfumeria.objects.filter(Codigo=codigo)
+        return render(request, "AppCoder/resultadosBusqueda.html", {"nombre":perfumes})
+    else:
+        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje":"No ingreso ningun dato!"})
+    
+        

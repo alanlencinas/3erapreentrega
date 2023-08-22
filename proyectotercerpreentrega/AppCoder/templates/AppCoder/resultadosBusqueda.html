@@ -1,0 +1,15 @@
+ {% extends 'AppCoder/padre.html' %}
+
+ {% load static %}
+
+ {% block titulo %} Esta es la pagina de resultados de busqueda! <br><br>- NATURA- </br></br> {% endblock %}
+
+ {% block contenido_que_cambia %}
+    <h1>Resultados de Busqueda</h1>
+
+    {% for perfume in perfumes %}
+
+        <h3>{{ perfume.Codigo }} - {{ perfume.Nombre }}</h3>
+
+    {% endfor %}
+{% endblock %}
