@@ -5,5 +5,18 @@
 {% block titulo %} Cabello! <br><br>- NATURA- </br></br> {% endblock %}
 
 {% block contenido_que_cambia %}
-   <h1>ESTE ES EL CONTENIDO DE LA PAGINA QUE CAMBIA</h1>
+<h4>Formulario Productos de Cabello</h4>
+<br></br>
+
+<form action = '{% url 'cabello' %}' method="POST"> {% csrf_token %}
+    <table>
+    {{ formulario.as_table }}
+    </table>
+    <br></br>
+    <input type="submit" value="Agregar">
+</form>
+
+<h3>{{mensaje }}</h3>
+
+
 {% endblock %}

@@ -5,27 +5,19 @@
 {% block titulo %} Perfumeria! <br><br>- NATURA- </br></br> {% endblock %}
 
 {% block contenido_que_cambia %}
-   <h1><u>Perfumes en stock:</u></h1>
+<h4>Formulario Perfumeria</h4>
+<br></br>
+
+<form action = '{% url 'perfumeria' %}' method="POST"> {% csrf_token %}
+    <table>
+    {{ formulario.as_table }}
+    </table>
     <br></br>
-   <table>
-       <thead>
-           <tr>
-               <th>Código</th>
-               <th>Nombre</th>
-               <th>Sexo</th>
-               <th>Precio</th>
-           </tr>
-       </thead>
-       <tbody>
-           {% for perfume in perfumes %}
-           <tr>
-               <td>{{ perfume.Codigo }}</td>
-               <td>{{ perfume.Nombre }}</td>
-               <td>{{ perfume.Sexo }}</td>
-               <td>{{ perfume.Precio }}</td>
-           </tr>
-           {% endfor %}
-       </tbody>
-   </table>
+    <input type="submit" value="GUARDAR PERFUME">
+
+</form>
+
+<h3>{{ mensaje }}</h3>
 {% endblock %}
+
 

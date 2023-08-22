@@ -5,7 +5,7 @@ urlpatterns = [
    
    
     path('perfumeria/', perfumeria, name = 'perfumeria' ),
-    path('cuidadocorporal/', cuidadocorporal, name = 'cuidadocorporal'),
+    path('cuidadocorporal/', cuidadoCorporal, name = 'cuidadocorporal'),
     path('maquillaje/', maquillaje, name = 'maquillaje'),
     path('cabello/', cabello, name = 'cabello'), 
     path('clientes/', clientes, name = 'clientes'), 

@@ -1,0 +1,361 @@
+00:39:57	Matias Gagliardi:	al diaaaa
+00:40:03	Kary Francia Vásquez:	Buenas, sí profe!
+00:40:04	Federico Farola:	siii!!
+00:40:06	Pablo De La Vega:	si
+00:40:07	Julian Montani:	ahi andamos...
+00:40:11	Luciano Baleani:	al dia
+00:40:15	Natalia Chazarreta:	sii.. fue finde de rapaso
+00:40:22	Natalia Chazarreta:	y este también seguroo
+00:40:23	Guillermo Jaeger:	al dia
+00:40:24	Santiago Mirantes:	ya comencé con el desafío
+00:41:17	Ignacio Aristegui:	un huevon jajajaja
+00:42:20	Rafael Castillo:	claro
+00:42:25	Natalia Chazarreta:	si si
+00:42:29	Julian Montani:	okey
+00:43:11	Rafael Castillo:	tamos
+00:43:11	Federico Farola:	perfectoo
+00:43:21	[Tutor] Pablo David Schvager:	Recuerden que también tienen los tutores de coder ask
+00:44:11	Rafael Castillo:	micro
+00:44:11	[Tutor] Pablo David Schvager:	se escucha mal
+00:44:14	Natalia Chazarreta:	profe se lo escucha lejos
+00:44:16	[Tutor] Pablo David Schvager:	ahora si
+00:44:16	Rafael Castillo:	ahora
+00:44:18	Julian Montani:	ahi va
+00:44:40	Ignacio Aristegui:	uno viaja via publica en la url y otro de manera privada
+00:45:09	Rafael Castillo:	en el post viajan archivo
+00:45:29	Rafael Castillo:	si
+00:45:31	Pablo De La Vega:	si
+00:45:31	Diógenes Villalobos:	perdón por llegar tarde u,u
+00:45:44	Diógenes Villalobos:	ahh vale vale
+00:46:47	Rafael Castillo:	vamos
+00:46:50	Federico Farola:	vamos
+00:46:51	Guillermo Jaeger:	si
+00:46:53	Julian Montani:	tamos
+00:46:54	Luciano Baleani:	vamos
+00:47:02	Mateo Lesniewicz:	buenas se me hizo tarde
+00:48:51	Ignacio Aristegui:	disculpen, soy al único al que le va medio lag ?
+00:49:08	Rafael Castillo:	si un poco
+00:49:55	[Tutor] Pablo David Schvager:	si se entiende
+00:49:57	Rafael Castillo:	se entiende
+00:50:00	Pablo De La Vega:	vamos bien
+00:50:13	Rafael Castillo:	un poco mas
+00:50:14	Carlos Montenegro:	Si es posible uno mas
+00:50:26	Carlos Montenegro:	perefcto
+00:50:32	Martin Mamani:	Joya
+00:50:53	Rafael Castillo:	si
+00:50:58	Kary Francia Vásquez:	sí
+00:53:46	Rafael Castillo:	tamos
+00:54:32	Guillermo Jaeger:	si
+00:54:32	Rafael Castillo:	si
+00:54:34	Federico Farola:	vamos
+00:55:33	Rafael Castillo:	si
+00:55:36	Guillermo Jaeger:	si
+00:55:38	Federico Farola:	si
+00:55:39	Carlos Montenegro:	si
+00:55:50	Leandro Comba:	en action, es la página a donde va a ir ?
+00:56:10	Leandro Comba:	si, gracias
+00:56:34	Guillermo Jaeger:	si
+00:56:47	Rafael Castillo:	si
+00:57:28	Guillermo Jaeger:	si
+00:57:31	Martin Mamani:	Si
+00:58:09	Rafael Castillo:	excelente
+00:58:15	[Tutor] Pablo David Schvager:	sin el token, se podría suplantar el formulario
+00:58:23	Julián Gonzalez:	el código lo generamos nosotros?
+00:58:29	[Tutor] Pablo David Schvager:	Replying to "el código lo generam..."
+
+no
+00:58:33	[Tutor] Pablo David Schvager:	Replying to "el código lo generam..."
+
+es automatico
+00:58:37	Julián Gonzalez:	Replying to "el código lo generam..."
+
+oka gracias
+00:58:39	[Tutor] Pablo David Schvager:	Replying to "el código lo generam..."
+
+django lo genera
+00:58:44	Mateo Lesniewicz:	se debería usar cada vez que se necesite info del cente
+00:58:50	Mateo Lesniewicz:	cliente
+00:58:54	Guillermo Jaeger:	ook
+00:59:01	Mateo Lesniewicz:	ok
+00:59:26	Mateo Lesniewicz:	profe disculpe el post que significa?
+00:59:53	Mateo Lesniewicz:	no
+01:00:02	Mateo Lesniewicz:	llegue 10 min tarde perdon
+01:00:15	Mateo Lesniewicz:	si dale gracias
+01:00:37	Mateo Lesniewicz:	ah si profe muchas gracias ya entendi
+01:00:53	Mateo Lesniewicz:	diez puntos
+01:01:34	Mateo Lesniewicz:	si
+01:01:56	Rafael Castillo:	si
+01:02:48	Rafael Castillo:	el input
+01:03:05	Guillermo Jaeger:	si
+01:03:39	Rafael Castillo:	si
+01:03:45	Guillermo Jaeger:	guardarlo
+01:04:15	Mateo Lesniewicz:	profe q sentido tiene ese if? siempre todo lo q se ponga dentro del if va ser post o estoy equivocado?
+01:04:47	Mateo Lesniewicz:	ahhh
+01:04:49	Mateo Lesniewicz:	sisi
+01:06:52	Mateo Lesniewicz:	super claro gracias!
+01:07:30	Rafael Castillo:	vamooo
+01:07:32	Federico Farola:	perfecto!!
+01:07:33	Guillermo Jaeger:	sip
+01:07:34	Kary Francia Vásquez:	sii
+01:07:38	Julian Montani:	si
+01:07:39	Mateo Lesniewicz:	geniall
+01:07:45	Carlos Montenegro:	biennnn
+01:07:51	Guillermo Jaeger:	claro
+01:08:08	Carlos Montenegro:	profe
+01:08:14	Carlos Montenegro:	Una bolufpregunta
+01:08:25	Carlos Montenegro:	Pero si te olvidas la clave.. se soluciona creando otro superuser
+01:08:33	Carlos Montenegro:	okk#
+01:08:46	Rafael Castillo:	tamos
+01:08:48	Federico Farola:	tamos
+01:09:04	Pablo De La Vega:	no por ahora
+01:09:08	Natalia Chazarreta:	vamos bien
+01:11:12	Guillermo Jaeger:	si
+01:11:13	Martin Mamani:	Bien
+01:12:37	Rafael Castillo:	si
+01:12:45	Leandro Comba:	hay una llave de más
+01:14:14	Federico Farola:	va tomando forma
+01:14:17	Rafael Castillo:	si
+01:15:19	Rafael Castillo:	si
+01:16:15	Natalia Chazarreta:	sii
+01:17:49	Rafael Castillo:	si
+01:17:53	Federico Farola:	siisi
+01:17:54	Luciano Baleani:	si
+01:18:27	Rafael Castillo:	no imprime el html
+01:18:56	Leandro Comba:	perfecto
+01:18:57	Mateo Lesniewicz:	see
+01:18:58	Guillermo Jaeger:	limpio
+01:19:05	Federico Farola:	seep
+01:19:27	Rafael Castillo:	claro
+01:19:29	Luciano Baleani:	si
+01:19:40	Guillermo Jaeger:	sisi
+01:19:44	martin martinez:	sip
+01:20:03	Mateo Lesniewicz:	no seria valido por estar vacio x ej?
+01:20:17	Mateo Lesniewicz:	claro
+01:20:28	Mateo Lesniewicz:	dale joya
+01:21:11	Rafael Castillo:	si
+01:21:15	martin martinez:	siu
+01:21:53	Mateo Lesniewicz:	si
+01:21:57	Guillermo Jaeger:	ok
+01:22:04	Natalia Chazarreta:	🤯
+01:22:08	Guillermo Jaeger:	nonononon
+01:22:17	Guillermo Jaeger:	te segui y te entendí!!!!!
+01:22:25	Natalia Chazarreta:	vamoos bien
+01:22:30	Natalia Chazarreta:	pero como muchoo
+01:22:31	Natalia Chazarreta:	jajaj
+01:22:49	Hernan Chavez:	Hola profe acabo de llegar
+01:23:20	Hernan Chavez:	Oka
+01:24:32	Rafael Castillo:	urls?
+01:25:01	Rafael Castillo:	pero arriba esta como curso sin s
+01:25:08	Rafael Castillo:	urls
+01:25:23	Rafael Castillo:	ya
+01:25:25	Rafael Castillo:	lo vi mal
+01:26:51	Rafael Castillo:	dale
+01:27:17	Carlos Montenegro:	Que es essa linea amarilla?
+01:27:26	Carlos Montenegro:	okk
+01:27:29	Carlos Montenegro:	Ahh bien
+01:29:08	Mateo Lesniewicz:	render el form vacio
+01:29:59	Mateo Lesniewicz:	genil
+01:30:02	Mateo Lesniewicz:	genial
+01:30:27	Rafael Castillo:	profe perdón, en punto cambio de profesores a formulario_profesor
+01:30:42	Rafael Castillo:	en que punto
+01:30:50	Mateo Lesniewicz:	trae la info, ver si es valida y con cleaned pasarlo a dicc. asi se lo puede agregar a la db
+01:30:55	Rafael Castillo:	ok
+01:31:09	Rafael Castillo:	ya
+01:31:16	Rafael Castillo:	si
+01:31:17	Rafael Castillo:	ya
+01:31:17	Guillermo Jaeger:	as table?
+01:32:11	Guillermo Jaeger:	SISI
+01:32:30	Mateo Lesniewicz:	cleaned
+01:32:31	Ignacio Aristegui:	clean data
+01:32:41	Guillermo Jaeger:	chequear los datos
+01:32:57	Néstor VETERE:	Quie es coso?
+01:33:06	Joel Gaspar:	y si llega a pasar algún error en el almacenamiento en la base de datos?
+01:33:18	Néstor VETERE:	QUien es coso?
+01:33:34	Néstor VETERE:	Dijiste coso
+01:33:40	Joel Gaspar:	se refiere yo creo a como usted mencionaalgun objeto
+01:33:42	Jonatan Fionda:	profesores seria creo}
+01:33:56	Rafael Castillo:	si hiciste un comentario
+01:34:03	Guillermo Jaeger:	dijiste u me olvide el coso!!!!!
+01:34:11	Guillermo Jaeger:	jajjaja
+01:34:23	Guillermo Jaeger:	nada grave
+01:34:31	Néstor VETERE:	Ok
+01:34:41	Joel Gaspar:	y como se controla?
+01:34:43	Joel Gaspar:	ah ok
+01:34:48	Joel Gaspar:	okok
+01:35:19	Mateo Lesniewicz:	profe una pregunta basica volviendo un poco para atrás. supongamos que queres ubicar el form en una parte espec{ifica de la plantilla pero al no tener el código HTML en cada plantilla ya que no queremos repetirlo, no sabes exactamente donde lo estas ubicando. como haría?
+01:35:33	Mateo Lesniewicz:	tranqui
+01:36:22	Mateo Lesniewicz:	de diez
+01:36:42	Leandro Comba:	block
+01:36:43	Mateo Lesniewicz:	ah listo perdón me había olvidado
+01:36:46	Guillermo Jaeger:	te debería salir ta tablita abajo?
+01:36:49	[Tutor] Pablo David Schvager:	Mateo, en algún lugar tiene que estar en la herencia de plantillas
+01:36:50	Mateo Lesniewicz:	refresque memoria perdon
+01:36:51	martin martinez:	tanto table o p viaja como objeto no?
+01:36:57	Mateo Lesniewicz:	gracias
+01:37:35	Mateo Lesniewicz:	no
+01:37:42	Mateo Lesniewicz:	ahhh
+01:38:24	[Tutor]Alessandra:	Godoy
+01:38:24	Néstor VETERE:	Godoy
+01:38:51	Carlos Montenegro:	Claro, justo después del save
+01:39:14	Carlos Montenegro:	perfect
+01:39:14	Rafael Castillo:	si
+01:39:18	Guillermo Jaeger:	si
+01:39:30	Rafael Castillo:	aun no
+01:39:56	Federico Farola:	por el momento no
+01:40:21	[Tutor] Pablo David Schvager:	Si tiene razon el Profe hay Ezequiel .
+01:40:28	Rafael Castillo:	dale
+01:40:35	Luciano Baleani:	perfecto
+01:40:36	Ezequiel .:	Perdón
+01:40:42	Ezequiel .:	Ahí me lo cambio
+01:40:48	[Tutor] Pablo David Schvager:	Ok, gracias
+01:42:56	Santiago Mirantes:	profe, por alguna extraña razón Django me creó el settings.py sin el "STATICFILES_DIRS" especificado, lo que hizo que al trabajar con rutas estáticas se rompiera el código. Es normal que no se genere esa variable o se debería generar automáticamente?
+01:44:53	Santiago Mirantes:	ahh, perdón, no recordaba eso
+01:45:19	Santiago Mirantes:	sisi, eso me lo memoricé a la fuerza
+01:48:04	Mateo Lesniewicz:	como lo solucionaste santi?
+01:48:13	Mateo Lesniewicz:	recién vuelvo
+01:48:40	[Tutor] Pablo David Schvager:	Recuerden que si quieren compartir con nostros los tutores algún código que no funciona tienen que compartir la dirección al repositorio . Por que hay ocasiones en la que no entendemos el error si no podemos ver todo el código .
+01:49:08	Mateo Lesniewicz:	pablo a mi me pasó que le doy a render a un archivo HTML y me dice que no existe
+01:49:16	Mateo Lesniewicz:	cuando hasta le doy la ruta
+01:49:22	Mateo Lesniewicz:	no solo el nombre
+01:49:39	[Tutor]Alessandra:	Reacted to "Recuerden que si qui…" with 🙏
+01:50:02	[Tutor] Pablo David Schvager:	Lo más probable es que se trate un problema en la configuración de la ruta donde django tiene que ir a buscar las plantillas o templates
+01:50:25	[Tutor] Pablo David Schvager:	pásame la dirección del repo...
+01:50:41	Mateo Lesniewicz:	no lo tengo en git pablo, tranqui
+01:50:51	Mateo Lesniewicz:	dsps veo bien muchas gracias
+01:52:03	Mateo Lesniewicz:	si, es necesario
+01:52:16	Rafael Castillo:	estamos
+01:52:18	Mateo Lesniewicz:	tamo
+01:52:19	Nicolas Villagra:	estamos
+01:52:19	Guillermo Jaeger:	si
+01:52:19	Manuel Lujan González:	sip
+01:52:19	Julian Montani:	tamos
+01:52:20	Natalia Chazarreta:	sii
+01:52:21	Luciano Baleani:	tamos
+01:52:22	Tomas Di Renzo:	tamo
+01:52:23	Federico Farola:	tamos
+01:52:23	Pablo De La Vega:	estamos
+01:52:27	Christian A. Noguera Garcia:	tamos
+01:53:57	Mateo Lesniewicz:	profe cuando sentís q es necesario otra app?
+01:54:32	Mateo Lesniewicz:	ahh
+01:58:03	Guillermo Jaeger:	si
+01:58:03	Rafael Castillo:	siç
+01:58:03	Luciano Baleani:	si
+01:58:05	Mateo Lesniewicz:	si
+01:58:35	Guillermo Jaeger:	cual es el beneficio de hacer las cosas por GET?
+01:58:48	Guillermo Jaeger:	ok
+01:58:51	Guillermo Jaeger:	si
+01:59:40	Rafael Castillo:	vamos
+02:01:03	Guillermo Jaeger:	si
+02:01:39	Mateo Lesniewicz:	q condición es? q tengn comisión?
+02:01:39	Rafael Castillo:	claro
+02:01:48	Mateo Lesniewicz:	ahh
+02:01:50	Mateo Lesniewicz:	genial
+02:03:02	Guillermo Jaeger:	si
+02:03:29	Guillermo Jaeger:	mensaje
+02:03:34	Rafael Castillo:	return un mjs
+02:05:43	Rafael Castillo:	si
+02:05:44	Luciano Baleani:	si
+02:05:46	Hernán Chávez:	si
+02:05:50	Pablo Muñoz Gonzalez:	si
+02:05:51	Mateo Lesniewicz:	get
+02:05:56	Ignacio Aristegui:	get
+02:05:56	Luciano Baleani:	get
+02:05:57	Guillermo Jaeger:	get
+02:06:00	Luciano Baleani:	si
+02:06:06	Mateo Lesniewicz:	ski
+02:06:46	Ignacio Aristegui:	no
+02:06:49	Hernán Chávez:	No, un mensaje
+02:06:52	Federico Farola:	falta un mensaje
+02:07:01	Ignacio Aristegui:	no se han encontrado resultados en su búsqueda o algun msj similar
+02:07:07	Guillermo Jaeger:	no existe el criterio buscado
+02:07:42	Carlos Montenegro:	si
+02:08:45	Santiago Mirantes:	nada
+02:08:46	Luciano Baleani:	nada
+02:09:40	Kary Francia Vásquez:	genial
+02:09:43	Guillermo Jaeger:	si
+02:09:43	Federico Farola:	tamos
+02:09:43	Rafael Castillo:	si
+02:09:46	Luciano Baleani:	tamos
+02:10:50	Guillermo Jaeger:	el HTML busquedacomision, podría ser usado para realizar comisión/ Alumno/ Profesor etc?
+02:13:16	martin martinez:	profe o tutores django permite trabajar con otras DB y utilizar querys no? o solo SQLite?
+02:13:18	Rafael Castillo:	si
+02:13:18	Pablo De La Vega:	si
+02:13:19	Guillermo Jaeger:	si
+02:13:20	Federico Farola:	isis
+02:13:21	Mateo Lesniewicz:	menos mal q lo explicaste asi profe
+02:13:23	Mateo Lesniewicz:	genial
+02:13:35	[Tutor] Pablo David Schvager:	Replying to "profe o tutores djan..."
+
+Si se puede usar otra DB
+02:13:57	martin martinez:	ok gracias!
+02:14:26	Mateo Lesniewicz:	profe con un si/no, es complicado hacer una web q se pueda usar sin internet?
+02:14:48	Mateo Lesniewicz:	pero q el cliente lo pueda hacer sin internet
+02:15:01	Santiago Mirantes:	para eso tendrías que crear una web app que se distribuya
+02:15:11	Mateo Lesniewicz:	ah gracias!
+02:16:25	martin martinez:	si si
+02:16:26	Kary Francia Vásquez:	sí
+02:16:26	Luciano Baleani:	si
+02:16:29	Guillermo Jaeger:	si
+02:17:03	Santiago Mirantes:	consulta, vamos a ver nuevos contenidos después de esto o va a ser solo repaso?
+02:17:12	Santiago Mirantes:	nono, en las sig.
+02:17:20	Santiago Mirantes:	ahh, hermoso
+02:17:24	Ignacio Aristegui:	jjfhgklñajlkajlkaj
+02:17:25	Manuel Lujan González:	jajajaja
+02:17:32	Ignacio Aristegui:	mamita santa
+02:17:34	Rafael Castillo:	😅
+02:17:36	Pablo De La Vega:	Me quedó muy claro todo, pero el finde si o si repaso. :)
+02:17:46	martin martinez:	nop solo hace falta sentarse y codear
+02:17:53	Joel Gaspar:	la siguiente entrega cuando se habilita
+02:17:55	Joel Gaspar:	ah ya jeje
+02:18:39	Luciano Baleani:	si
+02:18:39	Guillermo Jaeger:	si
+02:18:40	Santiago Mirantes:	sí
+02:18:42	Federico Farola:	si
+02:18:43	Julián Gonzalez:	si
+02:19:05	Hernán Chávez:	El readme es lo que todo programador se olvida de hacer
+02:20:11	[Tutor] Pablo David Schvager:	https://www.markdowntutorial.com/
+02:20:16	Luciano Baleani:	Reacted to "https://www.markdown..." with 👍
+02:20:34	[Tutor] Pablo David Schvager:	https://tutorialmarkdown.com/
+02:20:54	martin martinez:	claro
+02:21:28	Julian Montani:	si
+02:21:29	Mateo Lesniewicz:	si
+02:21:31	Luciano Baleani:	si
+02:21:32	Pablo Muñoz Gonzalez:	si
+02:21:34	Natalia Chazarreta:	sii
+02:24:48	Manuel Lujan González:	si señor
+02:24:48	Pablo De La Vega:	si
+02:24:49	Facundo Rodriguez Malaver:	Si
+02:24:50	Federico Farola:	si
+02:24:52	Luciano Baleani:	Clarisimo
+02:24:54	Guillermo Jaeger:	si clarisimo
+02:24:59	Pablo Muñoz Gonzalez:	quedo claro
+02:25:12	[Tutor]Alessandra:	Chicos, es un monton de contenido. Vean de nuevo la clase y cualquier cosa esta coder ask, chat de plataforma y el after..
+02:26:15	Santiago Mirantes:	No hace falta incorporar Bootstrap al proyecto, no? Es decir, puedo construir mi propia plantilla sin añadir la librería?
+02:26:33	Santiago Mirantes:	genial
+02:26:55	[PROFE] Franco Di Martino:	https://github.com/francodimartino/coder43870
+02:27:13	Néstor VETERE:	CUAND ES EL AFTER?
+02:27:15	Rafael Castillo:	aun no
+02:27:16	Hernán Chávez:	Fecha de entrega
+02:27:31	martin martinez:	sal traer se tiene q mostrar en un form o se puede hacer tipo un card??
+02:27:35	Hernán Chávez:	gracias
+02:28:11	martin martinez:	perfecto
+02:28:18	Rafael Castillo:	en el after podemos preguntar del desafio?
+02:28:21	Antonella Muzzupappa:	consulta, todavía no tengo el presente de la clase, soy el único ?
+02:28:34	Rafael Castillo:	dale
+02:28:44	Antonella Muzzupappa:	anto?
+02:28:46	martin martinez:	nos vemos profe!!!
+02:28:50	Antonella Muzzupappa:	uh me logue con el de mi novia
+02:28:51	Antonella Muzzupappa:	dios mio
+02:29:02	Antonella Muzzupappa:	gracias franco
+02:29:09	[Tutor]Alessandra:	Gracias profe! Nos vemos el jueves!
+02:29:18	Luciano Baleani:	Buenas noches a todos, nos vemos el jueves!!
+02:29:18	Natalia Chazarreta:	Reacted to "uh me logue con el d..." with 😂
+02:29:19	Mateo Lesniewicz:	gracias
+02:29:19	Matias Vega:	Buenas noches!
+02:29:20	[Tutor] Pablo David Schvager:	Nos vemos el jueves !
+02:29:20	Santiago Mirantes:	Buenas noches, nos vemos!
+02:29:20	Julian Montani:	chau profe, nos vemos!!
+02:29:21	Manuel Lujan González:	bonne nuit
+02:29:21	Jonatan Fionda:	buenas noches
+02:29:22	Rafael Castillo:	gracias
+02:29:23	Federico Farola:	nos vemooos
