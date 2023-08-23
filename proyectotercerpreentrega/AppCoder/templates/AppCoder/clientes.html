@@ -16,6 +16,35 @@
     <input type="submit" value="Agregar">
 </form>
 
+<br></br>
+
+<table>
+    <thead>
+      <tr>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>DNI</th>
+        <th>Email</th>
+        <th>Opciones</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for clientes in clientes %}
+      <tr>
+        <td>{{ clientes.Apellido }}</td>
+        <td>{{ clientes.Nombre }}</td>
+        <td>{{ clientes.DNI }}</td>
+        <td>{{ clientes.Email }}</td>
+        <td>
+            <a class="btn btn-danger" href="{% url 'eliminarcliente' clientes.id %}" style = "Color: black;"><u><b>Eliminar</b></u></a>
+            <a class="btn btn-primary" href="" style = "Color: black;"><u><b>Editar</b></u></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<br></br>
 <h3>{{mensaje }}</h3>
 
 

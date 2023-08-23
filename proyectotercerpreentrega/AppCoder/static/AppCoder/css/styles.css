@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*!
 * Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
 * Copyright 2013-2023 Start Bootstrap
@@ -10841,7 +10842,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("../assets/img/bg-masthead1.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -10897,7 +10898,7 @@ header.masthead h1, header.masthead .h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("../assets/img/bg-masthead1.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -10916,4 +10917,16 @@ header.masthead h1, header.masthead .h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.btn-custom-danger {
+  background-color: #ff0000; /* Cambia este color a tu preferencia */
+  color: #ffffff; /* Cambia este color a tu preferencia */
+  /* Puedes agregar más estilos según tus necesidades */
+}
+
+.btn-custom-success {
+  background-color: #00ff00; /* Cambia este color a tu preferencia */
+  color: #ffffff; /* Cambia este color a tu preferencia */
+  /* Puedes agregar más estilos según tus necesidades */
 }
