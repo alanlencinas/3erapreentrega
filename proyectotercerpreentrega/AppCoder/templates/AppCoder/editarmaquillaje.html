@@ -2,11 +2,11 @@
 
  {% load static %}
 
- {% block titulo %} Editando perfume:  {{ perfumeria }} {% endblock %}
+ {% block titulo %} Editando oroducto de maquillaje:  {{ maquillajes }} {% endblock %}
 
  {% block contenido_que_cambia %}
     
- <form action="{% url 'editarperfume' perfumeria.id %}" method ="POST"> {% csrf_token %}
+ <form action="{% url 'editarmaquillaje' maquillajes.id %}" method ="POST"> {% csrf_token %}
 
 
     <table>

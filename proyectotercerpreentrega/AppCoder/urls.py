@@ -18,6 +18,9 @@ urlpatterns = [
     path('eliminarcliente/<id>', eliminarcliente, name = 'eliminarcliente'),
     path('editarcabello/<id>', editarcabello, name = 'editarcabello'),
     path('editarperfume/<id>', editarperfume, name = 'editarperfume'),
+    path('editarmaquillaje/<id>', editarmaquillaje, name = 'editarmaquillaje'),
+    path('editarcliente/<id>', editarcliente, name = 'editarcliente'),
+    path('busquedaPerfume', busquedaPerfume, name = 'busquedaPerfume'),
 
 ]
 
