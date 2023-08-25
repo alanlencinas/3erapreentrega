@@ -10930,3 +10930,25 @@ footer.footer {
   color: #ffffff; /* Cambia este color a tu preferencia */
   /* Puedes agregar más estilos según tus necesidades */
 }
+
+.logo-image {
+  width: 50px; /* Ajusta este valor según tu preferencia */
+  height: auto; /* Mantener la proporción original */
+}
+
+
+.titulo {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace, sans-serif; /* Cambiar la fuente según tus preferencias */
+}
+
+.titulo-texto {
+  font-size: 85px; /* Cambiar el tamaño de la fuente */
+  font-weight: bold; /* Cambiar el peso de la fuente */
+  color: #ffffff; /* Cambiar el color de la fuente */
+}
+
+.natura-texto {
+  font-size: 40px; /* Cambiar el tamaño de la fuente */
+  color: #25cff2; /* Cambiar el color de la fuente */
+}
