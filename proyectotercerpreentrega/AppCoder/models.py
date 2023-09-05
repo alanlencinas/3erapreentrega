@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 
@@ -43,5 +45,10 @@ class Clientes(models.Model):
     Email = models.EmailField()
     def __str__(self):
         return f'{self.Apellido} - {self.Nombre} - {self.DNI} -{self.Email}'
+    
+    
+class Avatar(models.Model):
+    imagen=models.ImageField(upload_to="avatars", null=True, blank= True)
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
     
     

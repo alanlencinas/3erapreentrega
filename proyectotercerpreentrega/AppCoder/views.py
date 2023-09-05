@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from .models import Perfumeria, Cuidadocorporal, Maquillaje, Cabello, Clientes
 from django.http import HttpResponse
-from .forms import perfumeria_Formulario, cuidado_Corporal_Formulario, maquillaje_Formulario, cabello_Formulario, clientes_Formulario
-
+from .forms import perfumeria_Formulario, cuidado_Corporal_Formulario, maquillaje_Formulario, cabello_Formulario, clientes_Formulario, RegistroUsuario_Formulario, UserEditForm
+from django.contrib.auth import login, authenticate, update_session_auth_hash
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.shortcuts import render, redirect
 # Create your views here.
 
 def inicio(request):
@@ -231,18 +236,105 @@ def eliminarcuidadocorporal(request, id):
     cuidadoscorporales = Cuidadocorporal.objects.all()
     formulario_cuidadocorporal = cuidado_Corporal_Formulario()
     mensaje = 'Producto Cuidado Corporal Eliminado'
-    return render(request, "AppCoder/maquillaje.html", {"mensaje": mensaje, "formulario": formulario_cuidadocorporal, "cuidadoscorporales": cuidadoscorporales})
+    return render(request, "AppCoder/cuidadocorporal.html", {"mensaje": mensaje, "formulario": formulario_cuidadocorporal, "cuidadoscorporales": cuidadoscorporales})
+
+def editarcuidadocorporal(request, id):
+    cuidadocorporal = Cuidadocorporal.objects.get(id=id)
+    if request.method == 'POST':
+        form=cuidado_Corporal_Formulario(request.POST)
+        if form.is_valid():
+            info=form.cleaned_data
+            cuidadocorporal.Codigo=info["Codigo"]
+            cuidadocorporal.Nombre=info["Nombre"]
+            cuidadocorporal.Sexo=info["Sexo"]
+            cuidadocorporal.Precio=info["Precio"]
+            cuidadocorporal.save()
+            mensaje = "Cuidado Corporal editado"
+            cuidadoscorporales = Cuidadocorporal.objects.all()
+            formulario_cuidadocorporal = cuidado_Corporal_Formulario()
+            return render(request, "AppCoder/cuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadoscorporales, "mensaje": mensaje})
+    else:
+        formulario_cuidadocorporal = cuidado_Corporal_Formulario(initial={"Codigo": cuidadocorporal.Codigo, "Nombre": cuidadocorporal.Nombre, "Sexo": cuidadocorporal.Sexo, "Precio": cuidadocorporal.Precio})
+        return render(request, "AppCoder/editarcuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadocorporal})  
 
         
 def busquedaPerfume(request):
     return render(request, "AppCoder/busquedaPerfume.html")
     
 def buscar(request):
-    
-    if request.GET["codigo"]!="":
+    if request.GET.get("codigo"):
         codigo = request.GET["codigo"]
-        perfumes = Perfumeria.objects.filter(Codigo=codigo)
-        return render(request, "AppCoder/resultadosBusqueda.html", {"perfumes":perfumes})
+        perfumes = Perfumeria.objects.filter(Codigo=codigo)        
+        if not perfumes:  # Comprobar si perfumes está vacío
+            return render(request, "AppCoder/resultadosBusqueda.html", {'mensaje': "No se encontró ningun registro"})
+        else:
+            return render(request, "AppCoder/resultadosBusqueda.html", {"perfumes": perfumes})
     else:
-        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje": "No ingreso ningun dato!"})
+        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje": "No ingresó ningún dato!"})
 
+
+
+def login_request(request):
+    if request.method=="POST":
+        form=AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            info=form.cleaned_data
+            usu = info["username"]
+            clave= info["password"]
+            usuario=authenticate(username=usu, password=clave)
+            if usuario is not None:
+                login(request, usuario)
+                return render(request, "AppCoder/inicio.html", {'mensaje': f'Usuario {usu} logueado correctamente'})
+            else:
+                return render(request, "AppCoder/login.html", {'mensaje': "Datos Invalidos"})
+        else:
+            return render(request, "AppCoder/login.html", {'formulario': form, 'mensaje': "Datos Invalidos"})
+    else:
+        form=AuthenticationForm()
+        return render(request, "AppCoder/login.html", {'formulario': form})
+    
+def registrar(request):
+    if request.method=='POST':
+        form=RegistroUsuario_Formulario(request.POST)
+        if form.is_valid():
+            info=form.cleaned_data
+            nombre_usuario=info["username"]
+            form.save()
+            return render(request, "AppCoder/inicio.html", {'mensaje': f'Usuario {nombre_usuario} creado correctamente!'})
+        else:
+            return render(request, "AppCoder/registro.html", {'formulario': form, 'mensaje': "Datos Invalidos"})
+    else:
+        form=RegistroUsuario_Formulario()
+        return render(request, "AppCoder/registro.html", {'formulario': form })
+    
+
+
+
+@login_required
+def editarPerfil(request):
+    usuario = request.user
+
+    if request.method == "POST":
+        form = UserEditForm(request.POST, instance=usuario)
+        if form.is_valid():
+            info = form.cleaned_data
+            usuario.email = info["email"]
+            usuario.first_name = info["first_name"]
+            usuario.last_name = info["last_name"]
+            
+            # Cambiar la contraseña solo si se proporciona una nueva contraseña
+            nueva_contraseña = info.get("password1")
+            if nueva_contraseña:
+                usuario.set_password(nueva_contraseña)
+                update_session_auth_hash(request, usuario)  # Actualizar la sesión para evitar cerrar la sesión del usuario
+                messages.success(request, f"La contraseña del usuario {usuario.username} ha sido cambiada correctamente.")
+
+            usuario.save()
+            messages.success(request, f"El usuario {usuario.username} ha sido editado correctamente.")
+            return redirect('inicio')
+        else:
+            messages.error(request, "Datos Inválidos.")
+    else:
+        form = UserEditForm(instance=usuario)
+
+    return render(request, "AppCoder/editarPerfil.html", {"formulario": form, "nombreusuario": usuario.username})

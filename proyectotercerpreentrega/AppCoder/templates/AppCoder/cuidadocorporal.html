@@ -37,7 +37,7 @@
         <td>{{ cuidadoscorporales.Precio }}</td>
         <td>
             <a class="btn btn-danger" href="{% url 'eliminarcuidadocorporal' cuidadoscorporales.id %}" style = "Color: black;"><u><b>Eliminar</b></u></a>
-            <a class="btn btn-primary" href="" style = "Color: black;"><u><b>Editar</b></u></a>
+            <a class="btn btn-primary" href="{% url 'editarcuidadocorporal' cuidadoscorporales.id %}" style = "Color: black;"><u><b>Editar</b></u></a>
         </td>
       </tr>
       {% endfor %}
