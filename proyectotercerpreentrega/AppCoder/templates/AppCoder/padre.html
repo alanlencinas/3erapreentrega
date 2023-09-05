@@ -26,7 +26,9 @@
             <div class="container">
                 
                 <a class="navbar-brand" href="{% url 'inicio' %}">æ <u><b>NATURA</b></u> æ</a>
+                
                 {% if user.is_authenticated %}
+                <a class="btn btn-primary" href="{% url 'index' %}" style = "Color: black;"><u><b>NuestroBlog</b></u></a>
                 <a class="btn btn-primary" href="{% url 'perfumeria' %}" style = "Color: black;"><u><b>Perfumeria</b></u></a>
                 <a class="btn btn-primary" href="{% url 'maquillaje' %}" style = "Color: black;"><u><b>Maquillaje</b></u></a>
                 <a class="btn btn-primary" href="{% url 'cuidadocorporal' %}" style = "Color: black;"><u><b>Ciudado Corporal</b></u></a>

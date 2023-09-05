@@ -24,8 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio, name = 'inicio'),
     path('AppCoder/', include('AppCoder.urls')),
+    path('MiBlog/', include('MiBlog.urls')),    
     
 ]
 
 
-urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
