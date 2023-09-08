@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Perfumeria, Cuidadocorporal, Maquillaje, Cabello, Clientes
+from .models import Perfumeria, Cuidadocorporal, Maquillaje, Cabello, Clientes, Avatar
 from django.http import HttpResponse
 from .forms import perfumeria_Formulario, cuidado_Corporal_Formulario, maquillaje_Formulario, cabello_Formulario, clientes_Formulario, RegistroUsuario_Formulario, UserEditForm
 from django.contrib.auth import login, authenticate, update_session_auth_hash
@@ -10,8 +10,17 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 # Create your views here.
 
+def obtenerAvatar(request):
+    avatares=Avatar.objects.filter(user=request.user.id)
+    if len(avatares)!=0:
+        return avatares[0].imagen.url
+    else:
+        return "/media/avatares/avatarpordefecto.png"
+
 def inicio(request):
-    return render(request, 'AppCoder/inicio.html')
+    avatar= Avatar.objects.filter(user=request.user.id)[0].imagen.url
+    print(avatar)
+    return render(request, 'AppCoder/inicio.html', {"avatar":obtenerAvatar(request)})
 
 def cabello(request):
     if request.method =="POST":
@@ -31,7 +40,7 @@ def cabello(request):
         mensaje = None
     formulario_cabello = cabello_Formulario()
     cabellos = Cabello.objects.all()
-    return render(request, "AppCoder/cabello.html", {'formulario':formulario_cabello, 'mensaje': mensaje, 'cabellos':cabellos})
+    return render(request, "AppCoder/cabello.html", {'formulario':formulario_cabello, 'mensaje': mensaje, 'cabellos':cabellos, "avatar":obtenerAvatar(request)})
 
 
 def eliminarcabello(request, id):
@@ -40,7 +49,7 @@ def eliminarcabello(request, id):
     cabellos = Cabello.objects.all()
     formulario_cabello = cabello_Formulario()
     mensaje = 'Producto de Cabello Eliminado'
-    return render(request, "AppCoder/cabello.html", {"mensaje": mensaje, "formulario": formulario_cabello, "cabellos": cabellos})    
+    return render(request, "AppCoder/cabello.html", {"mensaje": mensaje, "formulario": formulario_cabello, "cabellos": cabellos, "avatar":obtenerAvatar(request)})    
 
 def editarcabello(request, id):
     cabello = Cabello.objects.get(id=id)
@@ -56,10 +65,10 @@ def editarcabello(request, id):
             mensaje = "Produco de Cabello editado"
             cabellos = Cabello.objects.all()
             formulario_cabello = cabello_Formulario()
-            return render(request, "AppCoder/cabello.html", {"formulario": formulario_cabello, "cabellos":cabellos, "mensaje": mensaje})
+            return render(request, "AppCoder/cabello.html", {"formulario": formulario_cabello, "cabellos":cabellos, "mensaje": mensaje, "avatar":obtenerAvatar(request)})
     else:
         formulario_cabello = cabello_Formulario(initial={"Codigo": cabello.Codigo, "Nombre": cabello.Nombre, "Sexo": cabello.Sexo, "Precio": cabello.Precio})
-        return render(request, "AppCoder/editarcabello.html", {"formulario": formulario_cabello, "cabellos":cabello})
+        return render(request, "AppCoder/editarcabello.html", {"formulario": formulario_cabello, "cabellos":cabello, "avatar":obtenerAvatar(request)})
 
 def maquillaje(request):
     if request.method =="POST":
@@ -78,7 +87,7 @@ def maquillaje(request):
         mensaje= None
     formulario_maquillaje = maquillaje_Formulario()
     maquillajes = Maquillaje.objects.all() 
-    return render(request, "AppCoder/maquillaje.html", {'formulario':formulario_maquillaje, 'mensaje':mensaje, 'maquillajes':maquillajes})
+    return render(request, "AppCoder/maquillaje.html", {'formulario':formulario_maquillaje, 'mensaje':mensaje, 'maquillajes':maquillajes, "avatar":obtenerAvatar(request)})
 
 def eliminarmaquillaje(request, id):
     maquillaje = Maquillaje.objects.get(id=id)
@@ -86,7 +95,7 @@ def eliminarmaquillaje(request, id):
     maquillajes = Maquillaje.objects.all()
     formulario_maquillaje = maquillaje_Formulario()
     mensaje = 'Producto de Maquillaje Eliminado'
-    return render(request, "AppCoder/maquillaje.html", {"mensaje": mensaje, "formulario": formulario_maquillaje, "maquillajes": maquillajes})
+    return render(request, "AppCoder/maquillaje.html", {"mensaje": mensaje, "formulario": formulario_maquillaje, "maquillajes": maquillajes, "avatar":obtenerAvatar(request)})
 
 def editarmaquillaje(request, id):
     maquillaje = Maquillaje.objects.get(id=id)
@@ -101,10 +110,10 @@ def editarmaquillaje(request, id):
             mensaje = "Producto de maquillaje editado"
             maquillajes = Maquillaje.objects.all()
             formulario_maquillaje = maquillaje_Formulario()
-            return render(request, "AppCoder/maquillaje.html", {"formulario": formulario_maquillaje, "maquillajes":maquillajes, "mensaje": mensaje})
+            return render(request, "AppCoder/maquillaje.html", {"formulario": formulario_maquillaje, "maquillajes":maquillajes, "mensaje": mensaje, "avatar":obtenerAvatar(request)})
     else:
         formulario_maquillaje = maquillaje_Formulario(initial={"Codigo": maquillaje.Codigo, "Nombre": maquillaje.Nombre, "Precio": maquillaje.Precio})
-        return render(request, "AppCoder/editarmaquillaje.html", {"formulario": formulario_maquillaje, "maquillajes":maquillaje})
+        return render(request, "AppCoder/editarmaquillaje.html", {"formulario": formulario_maquillaje, "maquillajes":maquillaje, "avatar":obtenerAvatar(request)})
     
 
 
@@ -126,7 +135,7 @@ def perfumeria(request):
         mensaje = None
     formulario_perfumeria = perfumeria_Formulario()
     perfumeria = Perfumeria.objects.all()
-    return render(request, "AppCoder/perfumeria.html", {"mensaje": mensaje, "formulario": formulario_perfumeria, "perfumeria": perfumeria})
+    return render(request, "AppCoder/perfumeria.html", {"mensaje": mensaje, "formulario": formulario_perfumeria, "perfumeria": perfumeria, "avatar":obtenerAvatar(request)})
 
 
 def eliminarperfume(request, id):
@@ -135,7 +144,7 @@ def eliminarperfume(request, id):
     perfumeria = Perfumeria.objects.all()
     formulario_perfume = perfumeria_Formulario()
     mensaje = 'Perfume Eliminado'
-    return render(request, "AppCoder/perfumeria.html", {"mensaje": mensaje, "formulario": formulario_perfume, "perfumeria": perfumeria})
+    return render(request, "AppCoder/perfumeria.html", {"mensaje": mensaje, "formulario": formulario_perfume, "perfumeria": perfumeria, "avatar":obtenerAvatar(request)})
 
 
 def editarperfume(request, id):
@@ -152,10 +161,10 @@ def editarperfume(request, id):
             mensaje = "Perfume editado"
             perfumes = Perfumeria.objects.all()
             formulario_perfumeria = perfumeria_Formulario()
-            return render(request, "AppCoder/perfumeria.html", {"formulario": formulario_perfumeria, "perfumeria":perfumes, "mensaje": mensaje})
+            return render(request, "AppCoder/perfumeria.html", {"formulario": formulario_perfumeria, "perfumeria":perfumes, "mensaje": mensaje, "avatar":obtenerAvatar(request)})
     else:
         formulario_perfumeria = perfumeria_Formulario(initial={"Codigo": perfume.Codigo, "Nombre": perfume.Nombre, "Sexo": perfume.Sexo, "Precio": perfume.Precio})
-        return render(request, "AppCoder/editarperfume.html", {"formulario": formulario_perfumeria, "perfumeria":perfume})    
+        return render(request, "AppCoder/editarperfume.html", {"formulario": formulario_perfumeria, "perfumeria":perfume, "avatar":obtenerAvatar(request)})    
 
             
             
@@ -177,7 +186,7 @@ def clientes(request):
         mensaje = None
     formulario_clientes = clientes_Formulario()
     clientes = Clientes.objects.all()
-    return render(request, "AppCoder/clientes.html", {'formulario':formulario_clientes, 'mensaje':mensaje, 'clientes': clientes}) 
+    return render(request, "AppCoder/clientes.html", {'formulario':formulario_clientes, 'mensaje':mensaje, 'clientes': clientes, "avatar":obtenerAvatar(request)}) 
 
 def eliminarcliente(request, id):
     cliente = Clientes.objects.get(id=id)
@@ -185,7 +194,7 @@ def eliminarcliente(request, id):
     clientes = Clientes.objects.all()
     formulario_clientes = clientes_Formulario()
     mensaje = 'Cliente Eliminado'
-    return render(request, "AppCoder/clientes.html", {"mensaje": mensaje, "formulario": formulario_clientes, "clientes": clientes}) 
+    return render(request, "AppCoder/clientes.html", {"mensaje": mensaje, "formulario": formulario_clientes, "clientes": clientes, "avatar":obtenerAvatar(request)}) 
 
 
 def editarcliente(request, id):
@@ -202,10 +211,10 @@ def editarcliente(request, id):
             mensaje = "Cliente editado"
             clientes = Clientes.objects.all()
             formulario_cliente = clientes_Formulario()
-            return render(request, "AppCoder/clientes.html", {"formulario": formulario_cliente, "clientes":clientes, "mensaje": mensaje})
+            return render(request, "AppCoder/clientes.html", {"formulario": formulario_cliente, "clientes":clientes, "mensaje": mensaje, "avatar":obtenerAvatar(request)})
     else:
         formulario_cliente = clientes_Formulario(initial={"Apellido": cliente.Apellido, "Nombre": cliente.Nombre, "DNI": cliente.DNI, "Email": cliente.Email})
-        return render(request, "AppCoder/editarcliente.html", {"formulario": formulario_cliente, "clientes":cliente})    
+        return render(request, "AppCoder/editarcliente.html", {"formulario": formulario_cliente, "clientes":cliente, "avatar":obtenerAvatar(request)})    
             
 
 
@@ -228,7 +237,7 @@ def cuidadoCorporal(request):
         mensaje = None
     formulario_cuidadocorporal = cuidado_Corporal_Formulario()
     cuidadoscorporales = Cuidadocorporal.objects.all()
-    return render(request, "AppCoder/cuidadocorporal.html", {'formulario':formulario_cuidadocorporal, 'mensaje': mensaje, 'cuidadoscorporales': cuidadoscorporales})
+    return render(request, "AppCoder/cuidadocorporal.html", {'formulario':formulario_cuidadocorporal, 'mensaje': mensaje, 'cuidadoscorporales': cuidadoscorporales, "avatar":obtenerAvatar(request)})
         
 def eliminarcuidadocorporal(request, id):
     cuidadocorporal = Cuidadocorporal.objects.get(id=id)
@@ -236,7 +245,7 @@ def eliminarcuidadocorporal(request, id):
     cuidadoscorporales = Cuidadocorporal.objects.all()
     formulario_cuidadocorporal = cuidado_Corporal_Formulario()
     mensaje = 'Producto Cuidado Corporal Eliminado'
-    return render(request, "AppCoder/cuidadocorporal.html", {"mensaje": mensaje, "formulario": formulario_cuidadocorporal, "cuidadoscorporales": cuidadoscorporales})
+    return render(request, "AppCoder/cuidadocorporal.html", {"mensaje": mensaje, "formulario": formulario_cuidadocorporal, "cuidadoscorporales": cuidadoscorporales, "avatar":obtenerAvatar(request)})
 
 def editarcuidadocorporal(request, id):
     cuidadocorporal = Cuidadocorporal.objects.get(id=id)
@@ -252,25 +261,26 @@ def editarcuidadocorporal(request, id):
             mensaje = "Cuidado Corporal editado"
             cuidadoscorporales = Cuidadocorporal.objects.all()
             formulario_cuidadocorporal = cuidado_Corporal_Formulario()
-            return render(request, "AppCoder/cuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadoscorporales, "mensaje": mensaje})
+            return render(request, "AppCoder/cuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadoscorporales, "mensaje": mensaje, "avatar":obtenerAvatar(request)})
     else:
         formulario_cuidadocorporal = cuidado_Corporal_Formulario(initial={"Codigo": cuidadocorporal.Codigo, "Nombre": cuidadocorporal.Nombre, "Sexo": cuidadocorporal.Sexo, "Precio": cuidadocorporal.Precio})
-        return render(request, "AppCoder/editarcuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadocorporal})  
+        return render(request, "AppCoder/editarcuidadocorporal.html", {"formulario": formulario_cuidadocorporal, "cuidadoscorporales":cuidadocorporal, "avatar":obtenerAvatar(request)})  
 
         
 def busquedaPerfume(request):
-    return render(request, "AppCoder/busquedaPerfume.html")
+    
+    return render(request, "AppCoder/busquedaPerfume.html", {"avatar":obtenerAvatar(request)})
     
 def buscar(request):
     if request.GET.get("codigo"):
         codigo = request.GET["codigo"]
         perfumes = Perfumeria.objects.filter(Codigo=codigo)        
         if not perfumes:  # Comprobar si perfumes está vacío
-            return render(request, "AppCoder/resultadosBusqueda.html", {'mensaje': "No se encontró ningun registro"})
+            return render(request, "AppCoder/resultadosBusqueda.html", {'mensaje': "No se encontró ningun registro", "avatar":obtenerAvatar(request)})
         else:
-            return render(request, "AppCoder/resultadosBusqueda.html", {"perfumes": perfumes})
+            return render(request, "AppCoder/resultadosBusqueda.html", {"perfumes": perfumes, "avatar":obtenerAvatar(request)})
     else:
-        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje": "No ingresó ningún dato!"})
+        return render(request, "AppCoder/busquedaPerfume.html", {"mensaje": "No ingresó ningún dato!", "avatar":obtenerAvatar(request)})
 
 
 
@@ -338,3 +348,6 @@ def editarPerfil(request):
         form = UserEditForm(instance=usuario)
 
     return render(request, "AppCoder/editarPerfil.html", {"formulario": form, "nombreusuario": usuario.username})
+
+
+

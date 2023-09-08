@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 
 def inicio1(request):
-    return render(request, 'MiBlog/index.html')
+    return render(request, 'MiBlog/blog.html')
+

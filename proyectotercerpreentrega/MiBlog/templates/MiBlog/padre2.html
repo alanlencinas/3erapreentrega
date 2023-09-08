@@ -35,7 +35,6 @@
                 <a class="btn btn-primary" href="{% url 'cabello' %}" style = "Color: black;"><u><b>Cabello</b></u></a>
                 <a class="btn btn-primary" href="{% url 'clientes' %}" style = "Color: black;"><u><b>Clientes</b></u></a>
                 <p>Bienvenido: <b>{{ user.username }}</b></p>
-                <img src="{{ avatar }}" alt="Avatar" style= "width:50px;height:10" />
                 <a class="btn btn-success" href="{% url 'logout' %}" style = "Color: black;"><u><b>Log Out</b></u></a>
                 <a class="btn btn-success" href="{% url 'editarPerfil' %}" style = "Color: black;"><u><b>Editar Perfil</b></u></a>
                 {% else %}
@@ -47,26 +46,7 @@
             <img src="{% static 'AppCoder/assets/img/mia.jpg' %}" alt="Logo" class="d-inline-block align-text-top logo-image">
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6">
-                        <div class="text-center text-white">
-                            <!-- Page heading -->
-                            <h1 class="mb-600">{% block titulo %} {% endblock %}</h1>
-                            <!-- Signup form -->
-                            <!-- * * * * * * * * * * * * * * * -->
-                            <!-- * * SB Forms Contact Form * * -->
-                            <!-- * * * * * * * * * * * * * * * -->
-                            <!-- This form is pre-integrated with SB Forms. -->
-                            <!-- To make this form functional, sign up at -->
-                            <!-- https://startbootstrap.com/solution/contact-forms -->
-                            <!-- to get an API token! -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    
         
         {% block contenido_que_cambia %}
 
