@@ -298,10 +298,10 @@ def login_request(request):
             else:
                 return render(request, "AppCoder/login.html", {'mensaje': "Datos Invalidos"})
         else:
-            return render(request, "AppCoder/login.html", {'formulario': form, 'mensaje': "Datos Invalidos"})
+            return render(request, "AppCoder/login.html", {'formulario': form, 'mensaje': "Datos Invalidos", "avatar": obtenerAvatar})
     else:
         form=AuthenticationForm()
-        return render(request, "AppCoder/login.html", {'formulario': form})
+        return render(request, "AppCoder/login.html", {'formulario': form, "avatar": obtenerAvatar  })
     
 def registrar(request):
     if request.method=='POST':
