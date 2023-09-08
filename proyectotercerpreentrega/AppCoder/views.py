@@ -15,11 +15,10 @@ def obtenerAvatar(request):
     if len(avatares)!=0:
         return avatares[0].imagen.url
     else:
-        return "/media/avatares/avatarpordefecto.png"
+        return "/media/avatars/avatarpordefecto.png"
 
 def inicio(request):
-    avatar= Avatar.objects.filter(user=request.user.id)[0].imagen.url
-    print(avatar)
+
     return render(request, 'AppCoder/inicio.html', {"avatar":obtenerAvatar(request)})
 
 def cabello(request):
@@ -315,7 +314,7 @@ def registrar(request):
             return render(request, "AppCoder/registro.html", {'formulario': form, 'mensaje': "Datos Invalidos"})
     else:
         form=RegistroUsuario_Formulario()
-        return render(request, "AppCoder/registro.html", {'formulario': form })
+        return render(request, "AppCoder/registro.html", {'formulario': form})
     
 
 
@@ -347,7 +346,7 @@ def editarPerfil(request):
     else:
         form = UserEditForm(instance=usuario)
 
-    return render(request, "AppCoder/editarPerfil.html", {"formulario": form, "nombreusuario": usuario.username})
+    return render(request, "AppCoder/editarPerfil.html", {"formulario": form, "nombreusuario": usuario.username, "avatar": obtenerAvatar})
 
 
 
